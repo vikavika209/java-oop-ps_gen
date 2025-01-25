@@ -12,8 +12,9 @@ public class ArticleMenu extends BaseCommand {
 
     private void initializeMenu() {
         commandSuppliers.put(1, CreateArticleCommand::new);
-        commandSuppliers.put(2, DeleteArticleCommand::new);
-        commandSuppliers.put(3, MainMenu::new);
+        commandSuppliers.put(2, CommentArticleCommand::new);
+        commandSuppliers.put(3, DeleteArticleCommand::new);
+        commandSuppliers.put(4, MainMenu::new);
     }
 
     @Override

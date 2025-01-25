@@ -3,6 +3,7 @@ package org.oop.service;
 import org.oop.api.IArticleService;
 import org.oop.api.IAuthService;
 import org.oop.api.dao.IArticleDao;
+import org.oop.dao.ArticleDao;
 import org.oop.di.Injector;
 import org.oop.model.Article;
 
@@ -55,4 +56,5 @@ public class ArticleService implements IArticleService {
     public boolean deleteArticle(long id) {
         return articleDao.deleteArticle(id);
     }
+
 }

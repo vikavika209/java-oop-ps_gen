@@ -4,6 +4,7 @@ import org.oop.model.Article;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 public interface IOService {
     String readLine();
@@ -19,4 +20,6 @@ public interface IOService {
     String prompt(String message);
 
     int promptForMenuSelection(Map<Integer, String> menuItems, String promptMessage);
+
+    Optional<String> promptOrReturn(String message);
 }

@@ -1,5 +1,6 @@
 package org.oop.model;
 
+import java.util.List;
 import java.util.Objects;
 
 public class User {
@@ -8,6 +9,7 @@ public class User {
     private String password;
     private String email;
     private Role role;
+    private List<Comment> comments;
 
     public User(int id, String username, String password, String email, Role role) {
         this.id = id;
@@ -45,6 +47,10 @@ public class User {
         return password;
     }
 
+    public List<Comment> getComments() {
+        return comments;
+    }
+
     public void setPassword(String password) {
         this.password = password;
     }
@@ -64,6 +70,8 @@ public class User {
     public void setRole(Role role) {
         this.role = role;
     }
+
+    public void setComments(List<Comment> comments) {}
 
     @Override
     public boolean equals(Object o) {

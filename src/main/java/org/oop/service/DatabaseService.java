@@ -47,6 +47,7 @@ public class DatabaseService implements IDatabaseService {
                             "SELECT * FROM users WHERE username = 'admin'" +
                             ");"
             };
+
             String url = configService.getProperty("database.url");
             String user = configService.getProperty("database.user");
             String password = configService.getProperty("database.password");

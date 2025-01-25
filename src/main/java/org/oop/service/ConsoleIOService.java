@@ -6,10 +6,7 @@ import org.oop.api.IOService;
 import org.oop.di.Injector;
 import org.oop.model.Article;
 
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class ConsoleIOService implements IOService {
     private final Scanner scanner;
@@ -87,6 +84,15 @@ public class ConsoleIOService implements IOService {
             }
         }
         return selection;
+    }
+
+    @Override
+    public Optional<String> promptOrReturn(String message) {
+        String input = prompt(message);
+        if ("back".equalsIgnoreCase(input)) {
+            return Optional.empty();
+        }
+        return Optional.of(input);
     }
 
     @Override
